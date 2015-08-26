@@ -1,13 +1,11 @@
-kegerface
+kegs.js
 =========
 
 A Kegerator Interface!
-This is a work in progress. Be gentle.
+Use this to display the contents of your kegerator and also semi-track the keg volume by recording the amounts of your pours. Kinda ghetto sure, but you don't need a raspberry Pi and flow meters or scales or whatever.
 
 
-Questions? Comments? Want to Contribute? email us - kegerface@gmail.com
 
-
-Note for beers.csv
+Notes
 ------------------------
-If you have a long beer name, change the final value from "BeerName" to "BeerNameL" and it will format correctly for 2 lines.
+Written with angular and uses php to record the keg pulls to the json file.

@@ -1,0 +1,36 @@
+.header {
+	width: 100%;
+	overflow:hidden;
+	//border-bottom: 1px white dashed;
+}
+.header__title {
+	text-align:center;
+	@include breakpoint($medium) {
+		width: span(6 of 8);
+		float: left;
+		text-align:left;
+		margin-top: 2em;
+	}
+	img {
+		max-width: 95%;
+	}
+}
+.header__logo {
+	padding-left: 1%;
+	font: 1.3em Georgia;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	@include breakpoint($medium) {
+		@include span(2 of 8);
+		margin-top: 1.3em;
+	}
+}
+
+
+// .logo__img {
+// 	@include breakpoint($medium) {
+// 		margin-top: 1em;
+// 		float: left;
+// 	}
+// }

@@ -1,0 +1,28 @@
+.info__row {
+	width:100%;
+	font-size:1em;
+	margin:0 0 0.5em;
+	@include breakpoint($medium) {
+		font-size: 1.25em;
+	}
+	@include breakpoint($large) {
+		// font-size: 2.5em;
+	}
+}
+
+	.info__left {
+		display:block;
+		// @include breakpoint($large) {
+		// 	float:left;
+		// 	width:48%;
+		// 	text-align:right;
+		// }
+	}
+	.info__right {
+		display:block;
+		// @include breakpoint($large) {
+		// 	float:right;
+		// 	width:48%;
+		// 	text-align:left;
+		// }
+	}

@@ -1,0 +1,6 @@
+.srm__img {
+	height:90px;
+	@include breakpoint($medium) {
+		height:150px;
+	}
+}

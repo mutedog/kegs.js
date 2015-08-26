@@ -1,0 +1,21 @@
+.ontap {
+	width:100%;
+	@include breakpoint($medium) {
+	//	@include container($medium-cols);
+	}
+	@include breakpoint($large, $no-query: '.lt-ie9') {
+	//	@include container($large-cols);
+	}
+	@include breakpoint($xlarge) {
+		//@include container($xlarge-cols);
+	}
+
+	tr {
+		border-bottom: 1px white dashed;
+	}
+	td {
+		padding:0.75em 1em 0.5em;
+		vertical-align: top;
+		
+	}
+}

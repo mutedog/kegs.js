@@ -1,0 +1,51 @@
+body {
+  background:#000000;
+  color:#ffffff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top:0;
+}
+h1 {
+    color: white;
+    font-family: Georgia;
+    font-size: 1.5em;
+    @include bp-480 {
+		font-size: 2em;
+	}
+    @include bp-800 {
+		font-size: 2.5em;
+	}
+}
+h2 {
+	font-size:1em;
+	@include bp-480 {
+		font-size: 1.5em;
+	}
+	@include bp-800 {
+		font-size: 2em;
+	}
+}
+h3 {
+	font-size:0.75em;
+	@include bp-480 {
+		font-size: 1em;
+	}
+	@include bp-800 {
+		font-size: 1.5em;
+	}
+}
+h4 {
+	font-size:0.5em;
+	@include bp-480 {
+		font-size: 0.75em;
+	}
+	@include bp-800 {
+		font-size: 1em;
+	}
+}
+
+.hidden {
+	display: none;
+}

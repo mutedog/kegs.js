@@ -1,0 +1,70 @@
+.pourForm {
+	display: none;
+	position: absolute;
+	width: 90%;
+	border: 1px solid white;
+	background: black;
+	left: 5%;
+	top: 11rem;
+	padding: 3rem;
+	-webkit-box-shadow: 0 0 90px 0 #000000;
+	box-shadow: 0 0 90px 0 #000000;
+	@include bp-480 {
+		width: 80%;
+		left: 10%;
+	}
+	@include bp-800 {
+		width: 50%;
+		left: 25%;
+	}
+	input {
+		color: black;
+	}
+	&.show {
+		display: block;
+	}
+	p {
+		font-size: 1.5rem;
+		margin-top: 0;
+	}
+	h3 {
+		margin-top: 0;
+	}
+}
+
+	.pourVol, .pourSave {
+		width: 100%;
+		display: block;
+		margin: 2rem 0;
+		font-size: 4rem;
+		text-align: center;
+	}
+	.pourSave {
+		font-size: 3rem;
+		padding: 0.5rem 0;
+	}
+
+	.pourClose {
+		position: absolute;
+		top: 0.25rem;
+		right: 0.25rem;
+		padding: 0.4rem 0.8rem;
+		border: 1px solid white;
+		color: white;
+		font-weight: bold;
+		background: black;
+		text-decoration: none;
+		font-size: 2rem;
+	}
+
+	.pourUnits {
+		color: white;
+		font-size: 1.5em;
+		text-align: center;
+	}
+		.pourUnitsAmount {
+			display: inline;
+			.ng-pristine & {
+				display: none;
+			}
+		}

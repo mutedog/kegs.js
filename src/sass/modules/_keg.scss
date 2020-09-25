@@ -1,0 +1,6 @@
+.keg__img {
+	width:60px;
+	@include bp-480 {
+		width:80px;
+	}
+}

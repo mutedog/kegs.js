@@ -1,0 +1,15 @@
+.info__row {
+	width:100%;
+	font-size:1em;
+	margin:0 0 0.5em;
+	@include bp-480 {
+		font-size: 1.25em;
+	}
+}
+
+	.info__left {
+		display:block;
+	}
+	.info__right {
+		display:block;
+	}

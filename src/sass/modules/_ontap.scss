@@ -1,0 +1,17 @@
+.ontap {
+	width:100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+
+	tr {
+		border-bottom: 1px white dashed;
+	}
+	td {
+		padding:0.75em 1em 0.5em;
+		vertical-align: top;
+	}
+}
+
+.ontap__titleinfo {
+	text-align: center;
+}

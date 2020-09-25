@@ -1,0 +1,29 @@
+.header {
+	width: 100%;
+	overflow:hidden;
+	//border-bottom: 1px white dashed;
+}
+.header__title {
+	text-align:center;
+	@include bp-480 {
+		width: 75%;
+		float: left;
+		text-align:left;
+		margin-top: 2em;
+	}
+	img {
+		max-width: 95%;
+	}
+}
+.header__logo {
+	padding-left: 1%;
+	font: 1.3rem Georgia;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	@include bp-480 {
+		width: 24%;
+		float: left;
+		margin-top: 1.3rem;
+	}
+}

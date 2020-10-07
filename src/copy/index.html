@@ -4,13 +4,11 @@
 	<meta charset="utf-8">
 	<title>Kegs.js</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-
-	<script src="js/angular.min.js"></script>
-	<script src="js/controllers.js"></script>
+	
 </head>
 	
-<body ng-controller="KegListCtrl">
-	<div class="container" id="wrapper">
+<body>
+	<div class="container" id="root">
 		<div class="header">
 			<div class="header__logo">
 				<img src="images/custom/logo.png" alt="Mute Dog Logo" height="100">
@@ -21,7 +19,7 @@
 			</div>
 		</div>	
 		<br />
-		<table class="ontap">
+		<table class="ontap" id="KegsList">
 			<thead>
 				<tr>
 					<td>&nbsp;</td>
@@ -32,9 +30,9 @@
 			</thead>
 			<tbody>
 			
-				<tr ng-repeat="keg in kegs" class="beer" id="beer{{keg.tap}}">
+				<tr v-for="(keg, index) in Kegs" class="beer" :id="('beer'+keg.tap)" :key="index">
 					<td class="beer__srm">
-						<img src="images/srm/SRM {{keg.srm}}.png" class="srm__img">
+						<img :alt="keg.srm" :src="imgSrm(keg.srm)" class="srm__img">
 					</td>
 					<td class="beer__name">
 						<h1>{{keg.name}}</h1>
@@ -52,23 +50,25 @@
 						</div>
 					</td>
 					<td class="beer__keg">
-						<a href="#" class="pour" ng-click="form = !form"><img src="images/kegs/{{Math.floor((keg.volume / 640) * 100)}}.png" class="keg__img"></a>
-						<form class="pourForm" ng-class="form ? 'show' : 'hide'">
-							<h3>{{keg.name}}</h3>
-							<p>Enter the approximate volume of your pour in ounces:</p>
-							<input type="number" name="pourVol" id="pourVol" ng-model="pourVol" class="pourVol">
-							<input type="text" name="resultVol" id="resultVol" ng-model="keg.volume" class="hidden">
-							<input type="submit" name="save" id="save" value="Save" ng-click="save(keg.tap, keg.volume - pourVol); form = !form" class="pourSave">
-							<div class="pourUnits">Alcohol units in your pour: <span class="pourUnitsAmount">{{Math.round(pourVol*2.957*keg.abv)/100}}</span></div>
-							<a href="#" class="pourClose" ng-click="form = !form">X</a>
-						</form>
-
+						<a class="pour" @click="toggleForm(keg)"><img :src="imgKegvol(keg.volume)" class="keg__img"></a>
+						<!-- <transition name="fade"> -->
+							<div class="pourForm" :class="{'show':keg.showForm}">
+								<h3>{{keg.name}}</h3>
+								<p>Enter the approximate volume of your pour in ounces:</p>
+								<input type="number" name="pourVol" id="pourVol" class="pourVol" v-model="keg.pour">
+								<input type="text" name="resultVol" id="resultVol" v-model="keg.volume" class="hidden">
+								<input type="button" name="save" id="save" value="Save" @click="save(index, keg.volume - keg.pour)" class="pourSave">
+								<div class="pourUnits">Alcohol units in your pour: <span class="pourUnitsAmount">{{Math.round(keg.pour*2.957*keg.abv)/100}}</span></div>
+								<a href="#" class="pourClose" @click="toggleForm(keg)">X</a>
+							</form>
+						<!-- </transition> -->
 					</td>
 				</tr>
 
 			</tbody>
 		</table>
 	</div>
-
+	<script src="js/vue.min.js"></script>
+	<script src="js/kegs.js"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@ var paths = {
 	input: 'src/',
 	output: 'dist/',
 	scripts: {
-		input: 'src/js/*',
+		input: ['src/js/*', 'node_modules/vue/dist/vue.js'],
 		polyfills: '.polyfill.js',
 		output: 'dist/js/'
 	},

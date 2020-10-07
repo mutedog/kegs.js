@@ -8,15 +8,13 @@ Use this to display the contents of your kegerator and also semi-track the keg v
 
 Notes
 ------------------------
-Written with angular and uses php to record the keg pulls to the json file.
+Written with Vue and uses php to record the keg pulls to the json file.
 
 
 
 
 Todo
 ------------------------
-Update to a newer version of angular.
-
 Write a backend interface to more easily update new beers coming on so you don't have to manually edit the json file.
 
 Make it easily skinnable for other homebrewers to change for their fake brand.

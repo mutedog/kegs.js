@@ -17,7 +17,7 @@ Todo
 ------------------------
 Write a backend interface to more easily update new beers coming on so you don't have to manually edit the json file.
 
-Make it easily skinnable for other homebrewers to change for their fake brand.
+Make it easily skinnable for other brewers to change for their brand.
 
 Update IBU section with hop graphics.
 
